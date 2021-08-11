@@ -44,7 +44,7 @@ Below are the access policies for the VMs on the network.
 
 ## ELK Server Configuration
 
-**Docker** is used to manage an ELK container on the ELK VM. This means these steps can be easily replicated through the following file: [install_elk.yml] (install_elk.yml).
+**Docker** is used to manage an ELK container on the ELK VM. This means these steps can be easily replicated through the following file: 'install_elk.yml'.
 
 ### Elk Configuration
 
