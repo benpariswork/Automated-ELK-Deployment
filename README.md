@@ -3,6 +3,7 @@ The main purpose of this project is to demonstrate automated deployment of an EL
 
 This document contains the following details:
 - Description of the Topology
+- Access Policies
 - ELK Configuration
   - Beats in Use
   - Machines Being Monitored
