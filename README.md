@@ -10,15 +10,15 @@ This document contains the following details:
 - How to Use the Ansible Build
 
 ### Description of the Topology
-This repository contains explanations and key files deliniating the topology and infrastructure below. 
+This repository contains explanations and key files delineating the topology and infrastructure below. 
 
 ![](topologydiagram.png)
 
-This project exposes a load balanced instance of DVWA (D*mn Vulnerable Web Application) and monitors it with a seperate server running the ELK stack (Elasticsearch, Logstash, & Kibana). Using a load balancer allows the vulnerable web servers to maintain a high level of availability. This configuration also provides an easy way to route all HTTP traffic in a secure manner. Through the ELK server we can monitor **system metrics** and changes to the **file systems** of the web servers.
+This project exposes a load balanced instance of DVWA (D*mn Vulnerable Web Application) and monitors it with a separate server running the ELK stack (Elasticsearch, Logstash, & Kibana). Using a load balancer allows the vulnerable web servers to maintain a high level of availability. This configuration also provides an easy way to route all HTTP traffic in a secure manner. Through the ELK server we can monitor **system metrics** and changes to the **file systems** of the web servers.
 
 The configuration details of each machine may be found below.
 
-| Name     |   Function  | Publuc IP Address | Loacal IP Address |  Operating System |
+| Name     |   Function  | Public IP Address | Local IP Address  |  Operating System |
 |----------|-------------|-------------------|-------------------|-------------------|
 | Jump Box | Gateway     | 168.62.21.159     | 10.0.0.4          |  Linux            |
 | Web 1    | Web Server  | N/A               | 10.0.0.9          |  Linux            |
@@ -30,7 +30,7 @@ Each web server has been placed into its own availability zone withing the load 
 
 ### Access Policies
 
-It is important to note that the **only** machine exposed to the internet is the **Jump-Box-Provisioner**. It is equally as important to ensure the Jump-Box-Provisioner only accepts connections from the public IP addressses of administrators who absolutely **need** access to the network. To maintain security the VMs within the inner network will only commmunicate with one another.
+It is important to note that the **only** machine exposed to the internet is the **Jump-Box-Provisioner**. It is equally as important to ensure the Jump-Box-Provisioner only accepts connections from the public IP addresses of administrators who absolutely **need** access to the network. To maintain security the VMs within the inner network will only communicate with one another.
 
 Below are the access policies for the VMs on the network.
 
@@ -49,7 +49,7 @@ Below are the access policies for the VMs on the network.
 
 ### Elk Configuration
 
-Ansible was used in order to automate the configuration of the ELK stack, this method allows for large scale repeatablility and scalability.
+Ansible was used in order to automate the configuration of the ELK stack, this method allows for large scale repeatability and scalability.
 
 The playbook implements the following tasks:
 - Install docker on ELK server
@@ -124,7 +124,7 @@ We have installed the following Beats on these machines:
 - Metricbeat, provides system metrics including CPU usage, SSH logins, failed `sudo` escalations, etc.
 - Packetbeat, comparable to wireshark, collects packets passing through the NIC.
 
-The followinf playbook, install_filebeat.yml installs Filebeat on the web servers. The playbook for installing Metricbeat and Packetbeat are not included. In order to create them replace every instance of the word 'filebeat' in the following playbook with the desired beat.  
+The following playbook, install_filebeat.yml installs Filebeat on the web servers. The playbook for installing Metricbeat and Packetbeat are not included. In order to create them replace every instance of the word 'filebeat' in the following playbook with the desired beat.  
 
 ```yaml
 ---
