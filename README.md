@@ -18,7 +18,7 @@ This project exposes a load balanced instance of DVWA (D*mn Vulnerable Web Appli
 The configuration details of each machine may be found below.
 
 | Name     |   Function  | Publuc IP Address | Loacal IP Address |  Operating System |
-|----------|-------------|-------------------|---------------------------------------|
+|----------|-------------|-------------------|-------------------|-------------------|
 | Jump Box | Gateway     | 168.62.21.159     | 10.0.0.4          |  Linux            |
 | Web 1    | Web Server  | N/A               | 10.0.0.9          |  Linux            |
 | Web 2    | Web Server  | N/A               | 10.0.0.10         |  Linux            |
